@@ -15,3 +15,21 @@
     max-height: 600px;
     // background-color: white;
 }
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding:42px;
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+    // background-color:white;
+}
+
+.tasks-lists-container{
+    display: flex;
+    flex-grow: 1;
+    padding: 42px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
