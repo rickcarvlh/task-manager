@@ -30,6 +30,7 @@
 
 .tasks-lists-container{
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     padding: 42px;
     border-top-right-radius: 8px;
@@ -68,5 +69,32 @@
         }
     }
 
+}
+
+.task{
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+
+    // styles for not completed tasks
+    &:not(.completed){
+    transition: 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+
+        &:active{
+            transform: scale(0.95);
+        }
+
+        &:hover{
+            box-shadow: 0 0 0 5px #eeeeee;
+        }
+    }
+
+    // style for completed tasks
+    &.completed{
+        text-decoration: line-through;
+        opacity: 0.8;
+    }
 }
 
