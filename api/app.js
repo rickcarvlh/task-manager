@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+// Load in the mongoose models
+const { List, Task } = require('./db/models');
+
+
 /* ROUTE HANDLERS */
 
 /* LIST ROUTES */
@@ -12,6 +16,9 @@ const app = express();
 
 app.get('/lists', (req, res) => {
     // return an array of all the lists in the database
+    List.find({}).then((lists) => {
+        res.send(lists);
+    })
 })
 
 /**
@@ -22,6 +29,7 @@ app.get('/lists', (req, res) => {
 app.get('/lists', (req, res) => {
     // Create a new list and return the new list document back to the user (wich includes the id)
     // The list information (fields) will be passed in via the JSON request body
+    let title = req.body.title
 })
 
 /**
@@ -39,7 +47,7 @@ app.patch('/lists/:id', (req, res) => {
  */
 
 
-app.delete('/lists/:id' , (req, res) => {
+app.delete('/lists/:id', (req, res) => {
     // Delete the specified list (document with the id in the URL)df
 })
 
