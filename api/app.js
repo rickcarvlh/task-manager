@@ -1,8 +1,14 @@
 const express = require('express');
 const app = express();
 
+// body parser middleware
+const bodyParser = require('body-parser')
+
 // Load in the mongoose models
 const { List, Task } = require('./db/models');
+
+// Load middleware
+app.use(bodyParser.json())
 
 
 /* ROUTE HANDLERS */
