@@ -11,3 +11,4 @@ const ListSchema = new mongoose.Schema({
 
 const List = new mongoose.Model('List', ListSchema);
 
+module.exports = { List }
