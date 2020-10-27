@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+// import mongoose
+const {mongoose} = require('./db/mongoose');
+
 // body parser middleware
 const bodyParser = require('body-parser')
 
@@ -36,6 +39,11 @@ app.get('/lists', (req, res) => {
     // Create a new list and return the new list document back to the user (wich includes the id)
     // The list information (fields) will be passed in via the JSON request body
     let title = req.body.title
+    let newList = new List({ title });
+    newList.save().then((listDoc) => {
+        // the full list document is returned (inc id)
+        res.send(listDoc)
+    })
 })
 
 /**

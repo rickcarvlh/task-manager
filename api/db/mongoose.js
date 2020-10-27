@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: true }).then(() => {
+mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log('Connected to mongodb sucessfully');
 }).catch((e) => {
     console.log('Error connecting to mongodb');
@@ -18,3 +18,4 @@ mongoose.set('useFindAndModify', false);
 module.exports = {
     mongoose
 };
+
