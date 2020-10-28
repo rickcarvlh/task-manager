@@ -15,4 +15,18 @@ export class WebRequestService {
   get(url: string) {
     return this.http.get(`${this.ROOT_URL}/${url}`)
   }
+
+  post(url: string, payload: Object) {
+    return this.http.post(`${this.ROOT_URL}/${url}`, payload);
+  }
+
+  patch(url: string, payload: Object) {
+    return this.http.post(`${this.ROOT_URL}/${url}`, payload);
+  }
+
+  delete(url: string) {
+    return this.http.delete(`${this.ROOT_URL}/${url}`);
+  }
 }
+
+// 3:45
