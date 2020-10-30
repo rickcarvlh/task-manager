@@ -16,4 +16,9 @@ export class TaskService {
   getLists() {
     return this.webReqService.get('lists');
   }
+
+  getTask(listId: string) {
+    // ! reason -> it's part of route comming from the backend
+    return this.webReqService.get(`lists/${listId}/tasks`);
+  }
 }
