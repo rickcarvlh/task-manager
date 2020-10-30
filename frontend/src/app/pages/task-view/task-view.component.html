@@ -5,15 +5,13 @@
                 Lists
             </h1>
             <div class="list-menu">
-                <a href="" class="list-menu-item is-active">
+                <a class="list-menu-item is-active">
                     <p>List #1</p>
                 </a>
-                <a href="" class="list-menu-item">
-                    <p>List #1</p>
+                <a class="list-menu-item" *ngFor="let list of lists">
+                    <p>{{list.title}}</p>
                 </a>
-                <a href="" class="list-menu-item">
-                    <p>List #1</p>
-                </a>
+
             </div>
 
             <button class="button is-primary has-text-white" routerLink="/new-list">+ New List</button>
