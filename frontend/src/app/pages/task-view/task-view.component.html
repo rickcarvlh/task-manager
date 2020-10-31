@@ -5,7 +5,7 @@
                 Lists
             </h1>
             <div class="list-menu">
-               
+
                 <a class="list-menu-item" *ngFor="let list of lists" [routerLink]="['/lists', list._id]"
                     routerLinkActive="is-active">
                     <p>{{list.title}}</p>
@@ -15,6 +15,7 @@
 
             <button class="button is-primary has-text-white" routerLink="/new-list">+ New List</button>
         </div>
+
         <div class="tasks-lists-container has-background-light">
             <h1 class="title has-text-primary">
                 Tasks
@@ -24,6 +25,12 @@
             <div class="task" *ngFor="let task of tasks">
                 <p>{{task.title}}</p>
             </div>
+
+
+            <button class="circle-add-button button is-primary">
+                <img src="../../../assets/plus-icon.svg" alt="svg image">
+            </button>
+
 
 
         </div>

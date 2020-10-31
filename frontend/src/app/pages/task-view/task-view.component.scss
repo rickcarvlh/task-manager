@@ -1,8 +1,5 @@
 @import'../../../main-styles.scss';
 
-
-
-
 .task-manager-container{
     display: flex;
     width: 100%;
@@ -23,6 +20,7 @@
 }
 
 .tasks-lists-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -36,6 +34,15 @@
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.circle-add-button {
+        position: absolute;
+        bottom: 25px;
+        right: 35px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
 }
 
 .list-menu {
@@ -90,5 +97,10 @@
         text-decoration: line-through;
         opacity: 0.8;
     }
+
+    
 }
+
+
+
 
